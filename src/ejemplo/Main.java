@@ -47,6 +47,17 @@ public class Main {
 		Piramide piramide=new Piramide();
 		System.out.println(piramide.getVolumen(3, 12));
 		System.out.println(piramide.getVolumen(3, 12,7));
+		System.out.println("----------------------------------------------------------------------------");
+		ejemplo.ejemploExamen.User userEjemplo= new ejemplo.ejemploExamen.User("rafael" , "falconi");
+		ArrayList<ejemplo.ejemploExamen.Item> itemsEjemplo=new ArrayList<ejemplo.ejemploExamen.Item>();
+		ejemplo.ejemploExamen.ShoppingCart shoppingCart2=new ejemplo.ejemploExamen.ShoppingCart(userEjemplo, 0, itemsEjemplo);
+		System.out.println(shoppingCart2);
+		ejemplo.ejemploExamen.Item itemEjemplo=new ejemplo.ejemploExamen.Item(50.0, "papas");
+		shoppingCart2.addItem(itemEjemplo);
+		System.out.println(shoppingCart2);
+		
+		
+
 		
 		
 

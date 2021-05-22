@@ -1,26 +1,18 @@
-package ejemplo.store;
+package ejemplo.ejemploExamen;
 
 import java.util.ArrayList;
 
 public class ShoppingCart {
-	private String id;
+
 	private User user;
+	private double mount;
 	private ArrayList<Item> items;
-	
 
-	public ShoppingCart(String id, User user, ArrayList<Item> items) {
+	public ShoppingCart(User user, double amount, ArrayList<Item> items) {
 		super();
-		this.id = id;
 		this.user = user;
+		this.mount = amount;
 		this.items = items;
-	}
-
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
 	}
 
 	public User getUser() {
@@ -31,17 +23,31 @@ public class ShoppingCart {
 		this.user = user;
 	}
 
+	public double getMount() {
+		return mount;
+	}
+
+	public void setMount(double amount) {
+		this.mount = amount;
+	}
+
 	public ArrayList<Item> getItems() {
 		return items;
 	}
 
 	public void setItems(ArrayList<Item> items) {
 		this.items = items;
+	};
+
+	public void addItem(Item item) {
+		items.add(item);
+		mount += item.getPrice();
+
 	}
 
 	@Override
 	public String toString() {
-		return "ShoppingCart {id=" + id + ", user=" + user + ", items=" + items + "}";
+		return "ShoppingCart [user=" + user + ", mount=" + mount + ", items=" + items + "]";
 	}
 	
 	
