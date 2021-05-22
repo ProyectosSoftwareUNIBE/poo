@@ -2,8 +2,8 @@ package ejemplo.cuenta;
 
 public class Account {
 
-	public String name, id, type;
-	public double amount, interest;
+	private String name, id, type;
+	private double amount, interest;
 
 	public Account(String name, String id, String type, double amount, double interest) {
 		this.name = name;
